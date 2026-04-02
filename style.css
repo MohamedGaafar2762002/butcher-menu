@@ -69,6 +69,8 @@ body {
   z-index: 1000;
 }
 
+
+
 .nav a {
   color: #fff;
   text-decoration: none;
@@ -234,12 +236,22 @@ h2 {
 
     /* NAVBAR */
     .nav {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: center;
-        padding: 10px;
-        gap: 8px;
-    }
+    display: flex;
+    justify-content: center; /* يخليهم في النص */
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+/* مهم عشان يفضلوا في النص */
+.nav::before,
+.nav::after {
+    content: "";
+    flex: 1;
+}
 
     .nav a {
         font-size: 12px;
@@ -279,6 +291,16 @@ h2 {
     text-align: center;
     }
 
+  .card-info {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    white-space: normal; /* يخليه ينزل سطر تاني */
+    overflow: visible;
+    text-overflow: unset;
+    line-height: 1.4;
+}
     /* WHATSAPP */
     .whatsapp {
         padding: 10px 16px;
