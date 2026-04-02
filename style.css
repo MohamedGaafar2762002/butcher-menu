@@ -1,0 +1,349 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #111;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  height: 250px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../public/main.jpg"); /* اسم الصورة */
+
+  background-size: cover;
+  background-position: center 46%;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  transform: translateY(-40%);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #000;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.overlay h1 {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.overlay p {
+  font-size: 16px;
+  color: #ccc;
+  font-family: Katibeh, serif;
+  margin-top: -1px;
+}
+
+.nav {
+  margin-top: 120px; /* عشان اللوجو واخد مساحة */
+}
+
+.header h1 {
+  margin: 0;
+  font-family: Marhey, serif;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #111;
+  padding: 15px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  background: #1c1c1c;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #8b0000;
+  transform: scale(1.05);
+}
+
+/* Active */
+.nav a.active {
+  background: #8b0000;
+}
+
+/* CONTAINER */
+.container {
+  padding: 15px;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 30px;
+  scroll-margin-top: 80px; /* عدل الرقم حسب ارتفاع الـ navbar */
+}
+
+h2 {
+  border-right: 4px solid red;
+  padding-right: 10px;
+}
+
+/* LIST */
+.list {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.price {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 10px;
+}
+ .card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+
+    font-size: 40px;
+    color: rgba(255,255,255,0.07);
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+}
+
+
+.demo-banner {
+    background: #8b0000;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.card span {
+    padding: 3px 10px;
+    margin: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+
+.card span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 20px 30%;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #26c25f;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* الأيقونة */
+.whatsapp i {
+    font-size: 16px;
+}
+
+.whatsapp:hover {
+    transform: scale(1.05);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        height: 200px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .overlay h1 {
+        font-size: 18px;
+    }
+
+    .overlay p {
+        font-size: 12px;
+    }
+
+    /* NAVBAR */
+    .nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .nav a {
+        font-size: 12px;
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+
+    /* SCROLL BAR HIDE */
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* LIST ITEMS */
+    .item {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    /* CARDS */
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        height: 140px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+        padding: 10px 16px;
+        font-size: 14px;
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+.footer {
+    background: #0d0d0d;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #1f1f1f;
+}
+
+/* ICONS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #8b0000; /* لون ثابت */
+    transform: scale(1.1);
+}
+
+/* INFO */
+.footer-info p {
+    margin: 5px 0;
+    color: #aaa;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .footer-info p {
+        font-size: 13px;
+    }
+}
+
+.social-icons a:nth-child(1) {
+    background: #e1306c; /* Instagram */
+}
+
+.social-icons a:nth-child(2) {
+    background: #1877f2; /* Facebook */
+}
+
+.social-icons a:nth-child(3) {
+    background: #25d366; /* WhatsApp */
+}
