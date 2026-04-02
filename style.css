@@ -236,14 +236,14 @@ h2 {
     .nav {
         flex-wrap: nowrap;
         overflow-x: auto;
-        justify-content: flex-start;
+        justify-content: justify-content;
         padding: 10px;
         gap: 8px;
     }
 
     .nav a {
         font-size: 12px;
-        padding: 6px 12px;
+        padding: 8px 14px;
         white-space: nowrap;
     }
 
@@ -273,6 +273,10 @@ h2 {
 
     .card img {
         height: 140px;
+    }
+
+    .card span{
+    text-align: center;
     }
 
     /* WHATSAPP */
