@@ -236,7 +236,7 @@ h2 {
     .nav {
         flex-wrap: nowrap;
         overflow-x: auto;
-        justify-content: justify-content;
+        justify-content: center;
         padding: 10px;
         gap: 8px;
     }
